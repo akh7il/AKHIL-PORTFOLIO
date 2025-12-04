@@ -1,0 +1,540 @@
+@font-face {
+    font-family: "trtlancelot";
+    src: url("../FONTS/TRTLancelot.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "anurati";
+    src: url("../FONTS/Anurati-Regular.otf") format('opentype');
+}
+
+@font-face{
+    font-family: "gurvaco";
+    src: url("../FONTS/Gurvaco.otf") format('opentype');
+}
+
+@font-face {
+    font-family: "kgperfectpenmanship";
+    src: url("../FONTS/KGPerfectPenmanship.ttf") format('truetype');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+}
+
+.main-page, .about-me, .skills, .projects, .contact-me, .email{
+    width: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
+    background: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me, .projects, .contact-me, .email{
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.skills{
+    background: repeating-linear-gradient(-45deg, #D4D40F 0 100px, black 100px 200px);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+nav{
+    color: #fff;
+}
+
+.navbar-nav{
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3%;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+.nav-link{
+    color: #fff !important;
+    background: black;
+    text-transform: uppercase;
+    font-family: "trtlancelot";
+    font-weight: 1000;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 6 0 !important;
+    margin: 0 !important;
+    position: relative;
+    transition: width .5s ease;
+    gap: 0;
+    height: 100%;
+}
+
+.nav-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: red;
+    transition: width .25s ease;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.main-page-content{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-page-content-left{
+    width: 50%;
+    height: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "anurati";
+    font-size: 4.1rem;
+    font-weight: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    flex-wrap: wrap;
+}
+
+.developer{
+    color: red;
+}
+
+.main-page-content-right{
+    flex: 1;
+    background: url("../IMAGES/akhil.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.nav-link:hover::after{
+    width: 100%;
+}
+
+.about-me-top{
+    color: red;
+    font-size: 4rem;
+    font-family: "gurvaco";
+    text-transform: uppercase;
+    width: 85%;
+    text-align: left;
+    height: auto;
+    border-top: 6px solid #D4D40F;
+    border-left: 6px solid #D4D40F;
+    border-right: 6px solid #D4D40F;
+    line-height: 1;
+    padding: 0 20px;
+    padding-top: 20px;
+}
+
+.about-me-bottom{
+    color: #fff;
+    font-size: large;
+    font-family: "kgperfectpenmanship";
+    width: 85%;
+    height: auto;
+    border-bottom: 6px solid #D4D40F;
+    border-left: 6px solid #D4D40F;
+    border-right: 6px solid #D4D40F;
+    padding: 0 30px;
+    padding-bottom: 20px;
+    text-align: justify;
+    line-height: 20px;
+}
+
+.skills-card{
+    width: 80%;
+    min-height: 60%;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 0 0 30px black;
+    border: 2px solid #D4D40F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px;
+}
+
+.projects{
+    height: auto;
+}
+
+.skills-card-head, .projects-head{
+    width: 100%;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    font-family: "gurvaco";
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.skills-card-skills{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    height: auto;
+    gap: 25px;
+}
+
+.card-skills{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    overflow: hidden;  
+}
+
+.skills-image{
+    width: 100%;
+    height: auto;
+}
+
+.projects-name{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card{
+    width: 210px;
+    height: 250px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-image{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-details{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: "gurvaco";
+    text-transform: uppercase;
+    font-size: large;
+    background: #fff;
+}
+
+.project-images{
+    width: 70%;
+    height: auto;
+}
+
+.projects-head{
+    color: #D4D40F;
+    padding-top: 20px;
+}
+
+.contact-me{
+    height: 100vh;
+}
+
+.contact-me-top, .contact-me-bottom{
+    height: 40%;
+    width: 80%;
+    border: 6px solid #D4D40F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+
+.contact-me-top-head, .contact-me-bottom-head, .email-head{
+    width: 100%;
+    font-family: "gurvaco";
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+}
+
+.view-resume{
+    width: 20%;
+    height: 18%;
+    background: #D4D40F;
+    border: 0;
+    border-radius: 5px;
+    font-family: "gurvaco";
+    font-size: large;
+    color: #fff;
+    letter-spacing: 3px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.contact-me-options{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-me-options a{
+    color: #fff;
+    font-size: 40px;
+}
+
+.email{
+    height: 100vh;
+    position: relative; 
+}
+
+.email-card{
+    width: 35%;
+    height: 65%;
+    background: #D4D40F;
+    border-radius: 5px;
+    overflow: hidden;  
+}
+
+.form-submission-message{
+    position: absolute;
+    font-family: "kgperfectpenmanship";
+    font-size: medium;
+    color: #fff;
+    border-radius: 3px;
+    bottom: 0;
+}
+
+.email-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.email-form input, textarea{
+    width: 80%;
+    height: 12%;
+    border: 0;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-family: "kgperfectpenmanship";
+    color: black;
+}
+
+.email-form textarea{
+    height: 40%;
+    padding-top: 10px;
+}
+
+.submit-email{
+    font-family: "kgperfectpenmanship";
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+    border: 0;
+    background: #fff;
+}
+
+.email p:empty{
+    padding: 0;
+}
+
+@media screen and (max-width: 576px){
+    .main-page{
+        height: 100vh;
+    }
+
+    .navbar-nav{
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .nav-link{
+        font-size: .8rem;
+        transition: none;
+        padding-left: 10px !important;
+        border-radius: 5px;
+    }
+
+    .nav-link::after{
+        display: none;
+    }
+
+    .nav-link:hover{
+        background-color: rgb(70, 65, 65);
+        border-radius: 5px;
+    }
+
+    .main-page-content{
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .main-page-content-left{
+        height: 100%;
+        width: 100%;
+        padding-bottom: 0;
+        justify-content: start;
+    }
+
+    .main-page-content-right{
+        max-height: 45%;
+        background-position: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .main-page-content-left .name{
+        font-family: "gurvaco";
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        font-size: 2rem;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-page-content-left .name span, .main-page-content-left .role span{
+        color: red;
+        text-transform: uppercase;
+    }
+
+    .main-page-content-left .role{
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        word-spacing: 5px;
+        padding-bottom: 20px;
+    }
+
+    .description{
+        font-family: "trtlancelot";
+        font-size: small;
+        text-transform: capitalize;
+        width: 100%;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+    .about-me{
+        height: auto;
+        padding-bottom: 60px;
+    }
+    .about-me-top{
+        font-size: 2rem;
+        border-top: 3px solid #D4D40F;
+        border-left: 3px solid #D4D40F;
+        border-right: 3px solid #D4D40F;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        flex-wrap: wrap;
+    }
+    .about-me-bottom{
+        font-size: 12px;
+        border-bottom: 3px solid #D4D40F; 
+        border-left: 3px solid #D4D40F;
+        border-right: 3px solid #D4D40F;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        flex-wrap: wrap;
+        padding: 0 20px;
+        padding-bottom: 20px;
+    }
+    .skills-card-head, .projects-head{
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+    .skills-image{
+        width: 80%;
+        height: 80%;
+    }
+    .project-card{
+        width: 130px;
+        height: 160px;
+    }
+    .contact-me-top, .contact-me-bottom{
+        border: 2px solid #D4D40F;
+    }
+    .contact-me-top-head, .contact-me-bottom-head{
+        font-size: 2rem;
+    }
+    .view-resume{
+        min-width: 150px;
+        font-size: small;
+    }
+    .contact-me-options a{
+        font-size: 30px;
+    }
+    .email-head{
+        font-size: 2rem;
+    }
+    .email-card{
+        width: 80%;
+    }
+    .email-form input, textarea{
+        height: 10%;
+        width: 90%;
+        font-size: small;
+    }
+}
+
+@media  screen and (min-width: 577px) and (max-width: 768px) {
+    
+}   
+
+
+
+
+
+
+
+
+
+
+

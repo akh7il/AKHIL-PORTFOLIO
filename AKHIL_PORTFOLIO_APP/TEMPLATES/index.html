@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'CSS/index.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/responsive.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+    <div class="main-page" id="home">
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <div class="container-fluid d-flex justify-content-end">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link first">home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#aboutme" class="nav-link">about me</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#skills" class="nav-link">skills</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#projects" class="nav-link">projects</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#contactme" class="nav-link">contact me</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#emailme" class="nav-link">email me</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="main-page-content">
+            <div class="main-page-content-left" id="main-page-text">
+                python
+                <br>
+                full stack
+                <br>
+                <span class="developer" id="developer">developer</span>
+            </div>
+            <div class="main-page-content-right"></div>
+        </div>
+    </div>
+
+    <div class="about-me" id="aboutme">
+        <div class="about-me-top">
+            about me
+        </div>
+        <div class="about-me-bottom">
+            I’m a passionate Python Full Stack Developer who loves turning ideas into fast, scalable, and visually
+            engaging digital experiences. I specialize in building clean, high-performance web applications using
+            Python, Django, JavaScript, HTML, CSS, Bootstrap, jQuery, and modern UI/UX practices. From designing
+            intuitive interfaces to developing powerful backend systems, I focus on creating products that are not just
+            functional — but smooth, elegant, and user-centered. I enjoy solving complex problems, crafting reusable
+            components, and bringing structure and clarity to every project I work on. With strong communication,
+            teamwork, and leadership skills, I thrive in collaborative environments and continuously push myself to
+            learn, evolve, and deliver impactful solutions. I believe great software is a blend of creativity,
+            precision, and performance — and I bring all three to every line of code I write.
+        </div>
+    </div>
+
+    <div class="skills" id="skills">
+        <div class="skills-card">
+            <div class="skills-card-head">
+                skills
+            </div>
+            <div class="skills-card-skills">
+                <div class="card-skills">
+                    <img src="{% static 'IMAGES/html.png' %}" alt="" class="skills-image">
+                </div>
+                <div class="card-skills">
+                    <img src="{% static 'IMAGES/css.png' %}" alt="" class="skills-image">
+                </div>
+                <div class="card-skills">
+                    <img src="{% static 'IMAGES/js.png' %}" alt="" class="skills-image">
+                </div>
+                <div class="card-skills">
+                    <img src="{% static 'IMAGES/bootstrap.png' %}" alt="" class="skills-image">
+                </div>
+                <div class="card-skills">
+                    <img src="{% static 'IMAGES/jQuery.png' %}" alt="" class="skills-image">
+                </div>
+                <div class="card-skills">
+                    <img src="{% static 'IMAGES/github.png' %}" alt="" class="skills-image">
+                </div>
+                <div class="card-skills">
+                    <img src="{% static 'IMAGES/python.png' %}" alt="" class="skills-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="projects" id="projects">
+        <div class="projects-head">
+            projects
+        </div>
+        <div class="projects-name">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="{% static 'IMAGES/fresh-logo.png' %}" alt="fresh" class="project-images">
+                    <div class="project-overlay">
+                        Fresh is an e-commerce website built with a strong UI and a complete frontend–backend structure,
+                        offering a smooth and functional shopping experience.
+                    </div>
+                </div>
+
+                <div class="project-details">
+                    fresh
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="{% static 'IMAGES/cafelogo.png' %}" alt="fresh" class="project-images">
+                    <div class="project-overlay">
+                        Cody Cafe is a fully responsive cafe website designed with a clean UI and smooth user
+                        interactions.
+                        It offers an attractive, feature-rich, and engaging browsing experience across all devices.
+                    </div>
+                </div>
+                <div class="project-details">
+                    cody cafe
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-me" id="contactme">
+        <div class="contact-me-top">
+            <h1 class="contact-me-top-head">view my resume</h1>
+            <a href="{% static 'RESUME/AKHIL MADHU.pdf' %}" class="view-resume" target="_blank">view</a>
+        </div>
+        <div class="contact-me-bottom">
+            <h1 class="contact-me-bottom-head">contact me</h1>
+            <div class="contact-me-options">
+                <a href="https://www.linkedin.com/in/akhil-madhu01" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:akhilprsnl01@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com/akh7il" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="email" id="emailme">
+        <div class="email-head">
+            email to me
+        </div>
+        <div class="email-card">
+            <form class="email-form" id="form-email">
+                <input type="text" name="name" placeholder="name" id="name" onkeypress="return isText(event)" required>
+                <input type="tel" name="phone" placeholder="phone" id="phone" onkeypress="return isNumber(event)"
+                    required>
+                <input type="email" name="email" placeholder="email" id="email" onkeypress="return isEmail(event)"
+                    required>
+                <textarea type="text" name="message" id="message" placeholder="message" required></textarea>
+                <button type="submit" class="submit-email">send</button>
+            </form>
+        </div>
+        <p class="form-submission-message" id="status"></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'JS/index.js' %}"></script>
+</body>
+
+</html>
